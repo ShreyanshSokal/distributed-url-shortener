@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: url-shortening-service
+  datasource:
+    url: ${URL_DB_URL:jdbc:postgresql://localhost:5432/url_shortener}
+    username: ${URL_DB_USERNAME:postgres}
+    password: ${URL_DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  sql:
+    init:
+      mode: never
+
+app:
+  base-url: ${APP_BASE_URL:http://localhost:8080}
+  short-code-length: 8
+  snowflake:
+    worker-id: ${WORKER_ID:1}
+    datacenter-id: ${DATACENTER_ID:1}
+  topics:
+    url-accessed: url-accessed-events

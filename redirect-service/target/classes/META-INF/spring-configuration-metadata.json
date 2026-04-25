@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "app.cache",
+      "type": "com.example.urlshortener.redirect.config.AppCacheProperties",
+      "sourceType": "com.example.urlshortener.redirect.config.AppCacheProperties"
+    },
+    {
+      "name": "app.topics",
+      "type": "com.example.urlshortener.redirect.config.AppTopicProperties",
+      "sourceType": "com.example.urlshortener.redirect.config.AppTopicProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.cache.url-ttl-seconds",
+      "type": "java.lang.Long",
+      "sourceType": "com.example.urlshortener.redirect.config.AppCacheProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "app.topics.url-accessed",
+      "type": "java.lang.String",
+      "sourceType": "com.example.urlshortener.redirect.config.AppTopicProperties"
+    }
+  ],
+  "hints": []
+}

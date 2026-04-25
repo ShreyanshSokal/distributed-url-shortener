@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      default-filters:
+        - name: RequestRateLimiter
+          args:
+            key-resolver: "#{@remoteAddressKeyResolver}"
+            redis-rate-limiter.replenishRate: 100
+            redis-rate-limiter.burstCapacity: 200
+        - name: CircuitBreaker
+          args:
+            name: gatewayCircuitBreaker
+            fallbackUri: forward:/fallback
+      routes:
+        - id: shorten-route
+          uri: lb://url-shortening-service
+          predicates:
+            - Path=/shorten,/api/v1/urls/**
+          filters:
+            - RewritePath=/shorten, /api/v1/urls/shorten
+        - id: analytics-route
+          uri: lb://analytics-service
+          predicates:
+            - Path=/analytics/**,/api/v1/analytics/**
+          filters:
+            - RewritePath=/analytics/(?<segment>.*), /api/v1/analytics/$\{segment}
+        - id: redirect-route
+          uri: lb://redirect-service
+          predicates:
+            - Path=/{shortCode}
+
+logging:
+  level:
+    org.springframework.cloud.gateway: INFO

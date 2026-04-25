@@ -1,0 +1,2 @@
+com\example\urlshortener\common\model\ResolvedUrlPayload.class
+com\example\urlshortener\common\event\UrlAccessedEvent.class

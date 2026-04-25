@@ -1,0 +1,8 @@
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\web\AnalyticsController.java
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\domain\UrlAnalytics.java
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\service\AnalyticsService.java
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\web\AnalyticsResponse.java
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\config\KafkaConsumerConfig.java
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\service\AnalyticsEventConsumer.java
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\repository\UrlAnalyticsRepository.java
+C:\Users\Shrey\Documents\Codex\2026-04-22-let\analytics-service\src\main\java\com\example\urlshortener\analytics\AnalyticsServiceApplication.java

@@ -1,0 +1,8 @@
+com\example\urlshortener\analytics\service\AnalyticsService.class
+com\example\urlshortener\analytics\config\KafkaConsumerConfig.class
+com\example\urlshortener\analytics\web\AnalyticsResponse.class
+com\example\urlshortener\analytics\service\AnalyticsEventConsumer.class
+com\example\urlshortener\analytics\web\AnalyticsController.class
+com\example\urlshortener\analytics\AnalyticsServiceApplication.class
+com\example\urlshortener\analytics\repository\UrlAnalyticsRepository.class
+com\example\urlshortener\analytics\domain\UrlAnalytics.class
